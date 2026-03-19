@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FOCO EM AÇÃO – Guia para Adultos com TDAH</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<script type="text/javascript">
+  function importHotmart(){
+    var s=document.createElement('script');
+    s.src='https://static.hotmart.com/checkout/widget.min.js';
+    document.head.appendChild(s);
+    var l=document.createElement('link');
+    l.rel='stylesheet';l.type='text/css';
+    l.href='https://static.hotmart.com/css/hotmart-fb.min.css';
+    document.head.appendChild(l);
+  }
+  importHotmart();
+</script>
+<style>
+:root{--bg:#0c0c0e;--bg2:#111115;--bg3:#18181f;--orange:#ff6b1a;--amber:#ffb347;--text:#eeeef0;--muted:#8a8a9a;--border:rgba(255,107,26,0.18);--card:#16161e;--sidebar-w:280px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5;}
+#landing{display:block;}
+#ebook-app{display:none;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:rgba(12,12,14,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.08em;color:var(--orange);text-transform:uppercase;}
+.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:6px;padding:10px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.04em;cursor:pointer;transition:background .2s,transform .15s;text-transform:uppercase;}
+.nav-cta:hover{background:#e85c10;transform:translateY(-1px);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 5vw 80px;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(255,107,26,.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:pulseGlow 4s ease-in-out infinite;}
+@keyframes pulseGlow{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1);}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08);}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,26,.12);border:1px solid var(--border);border-radius:100px;padding:7px 18px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:32px;animation:fadeUp .8s ease both;}
+.hero-badge span{width:7px;height:7px;background:var(--orange);border-radius:50%;animation:blink 1.2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.8rem,7vw,5.5rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;animation:fadeUp .9s .1s ease both;}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--orange),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.2rem);color:var(--muted);max-width:600px;margin:0 auto 20px;font-weight:300;animation:fadeUp .9s .2s ease both;}
+.hero-promise{font-size:clamp(.95rem,2vw,1.05rem);color:var(--text);max-width:560px;margin:0 auto 48px;font-style:italic;font-weight:300;border-left:3px solid var(--orange);padding-left:18px;text-align:left;animation:fadeUp .9s .3s ease both;}
+.hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp .9s .4s ease both;}
+.btn-main{background:linear-gradient(135deg,var(--orange),#e04d00);color:#fff;border:none;border-radius:10px;padding:18px 48px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.03em;cursor:pointer;transition:all .2s;box-shadow:0 8px 32px rgba(255,107,26,.35);text-transform:uppercase;position:relative;overflow:hidden;}
+.btn-main::after{content:'';position:absolute;top:-50%;left:-60%;width:50%;height:200%;background:rgba(255,255,255,.15);transform:skewX(-20deg);transition:left .5s;}
+.btn-main:hover::after{left:120%;}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,107,26,.5);}
+.price-tag{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--orange);}
+.price-sub{font-size:.82rem;color:var(--muted);letter-spacing:.05em;}
+.hero-guarantee{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* SECTIONS */
+.ls{padding:90px 5vw;position:relative;z-index:1;}
+.section-label{font-family:'Syne',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:16px;}
+.lsh{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:20px;}
+.inner{max-width:900px;margin:0 auto;}
+.inner-lg{max-width:1100px;margin:0 auto;}
+.stats{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;padding:50px 5vw;background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stat-item{text-align:center;}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;color:var(--orange);line-height:1;margin-bottom:6px;}
+.stat-label{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.forwho{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;}
+@media(max-width:700px){.forwho-grid{grid-template-columns:1fr;}}
+.forwho-col h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid;}
+.forwho-col.yes h3{color:#4caf50;border-color:#4caf50;}
+.forwho-col.no h3{color:var(--muted);border-color:var(--border);}
+.forwho-col ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.forwho-col li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;}
+.forwho-col li::before{content:'✓';font-weight:700;min-width:18px;}
+.forwho-col.yes li::before{color:#4caf50;}
+.forwho-col.no li::before{content:'✕';color:var(--muted);}
+.chapters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:48px;}
+.chapter-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s;}
+.chapter-card:hover{border-color:var(--orange);transform:translateY(-4px);}
+.chapter-card::before{content:attr(data-num);position:absolute;top:-8px;right:14px;font-family:'Syne',sans-serif;font-weight:800;font-size:5rem;color:rgba(255,107,26,.06);line-height:1;pointer-events:none;}
+.chapter-tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-bottom:10px;}
+.chapter-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:10px;line-height:1.3;}
+.chapter-card p{font-size:.88rem;color:var(--muted);line-height:1.6;}
+.examples-bg{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.examples-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
+@media(max-width:680px){.examples-grid{grid-template-columns:1fr;}}
+.example-card{background:var(--bg3);border-radius:16px;padding:32px;border:1px solid var(--border);position:relative;}
+.example-card::before{content:'"';font-family:'Syne',sans-serif;font-size:5rem;color:var(--orange);opacity:.25;position:absolute;top:8px;left:22px;line-height:1;}
+.example-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:14px;color:var(--amber);}
+.example-card p{font-size:.93rem;color:var(--muted);line-height:1.7;}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:48px;}
+.plan-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;}
+.plan-days{font-family:'Syne',sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:12px;}
+.plan-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.plan-card li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:var(--muted);}
+.plan-card li .chk{width:16px;height:16px;border:1.5px solid var(--border);border-radius:4px;min-width:16px;margin-top:2px;}
+.purchase-bg{background:var(--bg2);border-top:1px solid var(--border);}
+.purchase-box{max-width:520px;margin:48px auto 0;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:48px 40px;text-align:center;box-shadow:0 0 80px rgba(255,107,26,.08);}
+.purchase-box h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.purchase-box .sub{color:var(--muted);font-size:.95rem;margin-bottom:32px;}
+.price-big{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--orange);line-height:1;margin-bottom:6px;}
+.price-desc{font-size:.82rem;color:var(--muted);margin-bottom:32px;}
+.includes{text-align:left;margin-bottom:32px;display:flex;flex-direction:column;gap:10px;}
+.includes li{display:flex;align-items:center;gap:10px;font-size:.9rem;list-style:none;}
+.includes li::before{content:'✓';color:#4caf50;font-weight:700;}
+.btn-buy{width:100%;background:linear-gradient(135deg,var(--orange),#e04d00);color:#fff;border:none;border-radius:12px;padding:18px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.04em;cursor:pointer;transition:all .2s;box-shadow:0 8px 32px rgba(255,107,26,.35);text-transform:uppercase;margin-bottom:16px;}
+.btn-buy:hover{transform:translateY(-2px);}
+.secure-badge{display:flex;align-items:center;justify-content:center;gap:7px;color:var(--muted);font-size:.8rem;}
+footer{text-align:center;padding:36px 5vw;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border);}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.fade-in.visible{opacity:1;transform:none;}
+
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:200;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);}
+.overlay.active{display:flex;}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:20px;width:100%;max-width:480px;padding:40px 36px;position:relative;animation:modalIn .3s ease both;}
+@keyframes modalIn{from{opacity:0;transform:scale(.94) translateY(16px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.modal-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;}
+.modal-logo{font-family:'Syne',sans-serif;font-weight:800;color:var(--orange);font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.modal h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:4px;}
+.modal-price-row{display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border-radius:10px;padding:14px 18px;margin:20px 0;font-size:.9rem;}
+.modal-price-row span:last-child{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--orange);}
+.field-group{display:flex;flex-direction:column;gap:12px;margin-bottom:20px;}
+.field-label{font-size:.78rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;}
+.field-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 16px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s;}
+.field-input:focus{border-color:var(--orange);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.btn-pay{width:100%;background:linear-gradient(135deg,var(--orange),#e04d00);color:#fff;border:none;border-radius:10px;padding:16px;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .2s;box-shadow:0 6px 24px rgba(255,107,26,.35);text-transform:uppercase;margin-bottom:12px;}
+.modal-secure{text-align:center;font-size:.78rem;color:var(--muted);}
+.success-screen{display:none;text-align:center;}
+.success-icon{width:72px;height:72px;background:rgba(76,175,80,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 20px;border:2px solid #4caf50;}
+.success-screen h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:10px;color:#4caf50;}
+.success-screen p{color:var(--muted);font-size:.95rem;margin-bottom:24px;}
+.btn-access{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;border:none;border-radius:10px;padding:15px 32px;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:background .2s;text-transform:uppercase;letter-spacing:.04em;}
+.btn-access:hover{background:#e85c10;}
+
+/* ====== EBOOK READER ====== */
+#ebook-app{background:#f0f0f5;min-height:100vh;font-family:'DM Sans',sans-serif;color:#1a1a2e;}
+.eb-mobile-header{display:none;position:fixed;top:0;left:0;right:0;z-index:60;background:#1a1a2e;color:#fff;padding:14px 20px;align-items:center;justify-content:space-between;}
+@media(max-width:1023px){.eb-mobile-header{display:flex;}}
+.eb-mob-btn{background:none;border:none;color:#fff;cursor:pointer;font-size:1.3rem;padding:4px 8px;line-height:1;}
+.eb-mob-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.06em;}
+.eb-layout{display:flex;min-height:100vh;}
+.eb-sidebar{position:fixed;left:0;top:0;height:100%;width:var(--sidebar-w);background:#1a1a2e;color:#e8e8f0;z-index:50;overflow-y:auto;display:flex;flex-direction:column;transition:transform .3s ease;}
+@media(max-width:1023px){.eb-sidebar{transform:translateX(-100%);top:52px;height:calc(100% - 52px);}}
+.eb-sidebar.open{transform:translateX(0)!important;}
+.eb-sidebar-logo{padding:24px 20px 16px;border-bottom:1px solid rgba(255,255,255,.1);}
+.eb-sidebar-logo h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:.06em;}
+.eb-sidebar-logo p{font-size:.76rem;color:rgba(255,255,255,.45);margin-top:4px;}
+.eb-nav{padding:12px 10px;flex:1;}
+.eb-nav-btn{width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;border:none;background:none;color:rgba(255,255,255,.65);border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.87rem;text-align:left;transition:background .15s,color .15s;}
+.eb-nav-btn:hover{background:rgba(255,255,255,.07);color:#fff;}
+.eb-nav-btn.active{background:rgba(255,107,26,.25);color:#ff9a5c;font-weight:600;}
+.eb-nav-btn.is-chapter{padding-left:28px;}
+.eb-prog-wrap{padding:16px 20px;border-top:1px solid rgba(255,255,255,.1);}
+.eb-prog-label{font-size:.74rem;color:rgba(255,255,255,.45);margin-bottom:6px;}
+.eb-prog-bar{height:4px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden;}
+.eb-prog-fill{height:100%;background:var(--orange);border-radius:4px;transition:width .3s;}
+.eb-prog-count{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:4px;}
+.eb-main{flex:1;margin-left:var(--sidebar-w);}
+@media(max-width:1023px){.eb-main{margin-left:0;padding-top:52px;}}
+.eb-scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40;}
+.eb-scrim.show{display:block;}
+
+/* EBOOK CONTENT */
+.eb-page{max-width:720px;margin:0 auto;padding:48px 32px 64px;}
+@media(max-width:600px){.eb-page{padding:28px 20px 48px;}}
+.eb-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+.eb-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;color:#1a1a2e;margin-bottom:28px;}
+.eb-lead{font-size:1.07rem;color:#4b5563;line-height:1.72;margin-bottom:20px;}
+.eb-p{font-size:1rem;color:#374151;line-height:1.78;margin-bottom:18px;}
+.eb-h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;color:#1a1a2e;margin:32px 0 14px;}
+.eb-ul,.eb-ol{margin:0 0 18px;padding:0;list-style:none;}
+.eb-ul li,.eb-ol li{display:flex;align-items:flex-start;gap:10px;font-size:.97rem;color:#374151;line-height:1.65;margin-bottom:8px;}
+.eb-ul li::before{content:'•';color:var(--orange);font-size:1.3rem;line-height:1.35;flex-shrink:0;}
+.eb-ol{counter-reset:olc;}
+.eb-ol li{counter-increment:olc;}
+.eb-ol li::before{content:counter(olc);display:flex;align-items:center;justify-content:center;width:24px;height:24px;min-width:24px;background:var(--orange);color:#fff;border-radius:50%;font-size:.72rem;font-weight:700;margin-top:2px;}
+.eb-hl{background:#fff8f4;border:1px solid rgba(255,107,26,.22);border-left:4px solid var(--orange);border-radius:8px;padding:16px 20px;margin:24px 0;display:flex;gap:14px;align-items:flex-start;}
+.eb-hl p{font-size:.96rem;color:#4b5563;line-height:1.65;margin:0;}
+.eb-warn{background:#fffbeb;border:1px solid rgba(245,158,11,.28);border-left:4px solid #f59e0b;border-radius:8px;padding:16px 20px;margin:24px 0;display:flex;gap:14px;align-items:flex-start;}
+.eb-warn p{font-size:.96rem;color:#92400e;line-height:1.65;margin:0;}
+.eb-action{background:#fff;border:2px solid rgba(255,107,26,.28);border-radius:12px;padding:24px;margin:28px 0;}
+.eb-action-ttl{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:.97rem;color:#1a1a2e;margin-bottom:14px;}
+.eb-action-ttl::before{content:'✓';width:22px;height:22px;min-width:22px;background:var(--orange);color:#fff;border-radius:50%;font-size:.72rem;display:flex;align-items:center;justify-content:center;}
+.eb-steps{display:flex;flex-direction:column;gap:10px;margin:18px 0;}
+.eb-step{display:flex;gap:14px;padding:15px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;align-items:flex-start;}
+.eb-step-n{width:30px;height:30px;min-width:30px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;}
+.eb-step strong{display:block;font-size:.96rem;color:#1a1a2e;margin-bottom:3px;}
+.eb-step span{font-size:.88rem;color:#6b7280;}
+.eb-pcard{display:flex;gap:14px;padding:15px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;align-items:flex-start;margin-bottom:10px;}
+.eb-pcard-i{width:30px;height:30px;min-width:30px;background:rgba(255,107,26,.1);color:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;}
+.eb-pcard strong{display:block;font-size:.96rem;color:#1a1a2e;margin-bottom:3px;}
+.eb-pcard span{font-size:.88rem;color:#6b7280;}
+.eb-quote{font-size:1.05rem;font-style:italic;color:#374151;text-align:center;border:1px solid rgba(255,107,26,.22);background:#fff8f4;border-radius:10px;padding:20px 28px;margin:20px 0;line-height:1.65;}
+.eb-code{background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin:20px 0;}
+.eb-code-hd{background:#f3f4f6;padding:8px 16px;font-size:.76rem;font-weight:600;color:#6b7280;letter-spacing:.06em;text-transform:uppercase;}
+.eb-code-bd{padding:16px;}
+.eb-timer{display:flex;align-items:center;gap:20px;padding:20px;background:#fff8f4;border:1px solid rgba(255,107,26,.18);border-radius:12px;margin:20px 0;}
+.eb-timer-n{font-family:'Syne',sans-serif;font-weight:800;font-size:2.3rem;color:var(--orange);line-height:1;}
+.eb-timer-l{font-size:.8rem;color:#9ca3af;}
+.eb-tr{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+.eb-tr-bef{font-size:.9rem;color:#9ca3af;text-decoration:line-through;}
+.eb-tr-arr{color:var(--orange);}
+.eb-tr-aft{font-size:.9rem;font-weight:600;color:#1a1a2e;}
+.eb-nav-row{display:flex;align-items:center;justify-content:space-between;margin-top:48px;padding-top:28px;border-top:1px solid #e5e7eb;}
+.eb-nbtn{display:flex;align-items:center;gap:8px;padding:11px 22px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;border:1px solid #e5e7eb;background:#fff;color:#374151;}
+.eb-nbtn:hover:not(:disabled){border-color:var(--orange);color:var(--orange);}
+.eb-nbtn:disabled{opacity:.3;cursor:not-allowed;}
+.eb-nbtn.nx{background:var(--orange);color:#fff;border-color:var(--orange);}
+.eb-nbtn.nx:hover:not(:disabled){background:#e85c10;}
+
+/* COVER */
+.eb-cover{min-height:100vh;}
+.eb-cover-hero{background:#1a1a2e;color:#fff;padding:80px 32px 60px;text-align:center;}
+.eb-cover-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border-radius:100px;padding:7px 18px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:28px;}
+.eb-cover-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3rem,8vw,4.5rem);line-height:1;letter-spacing:-.02em;margin-bottom:20px;}
+.eb-cover-title em{font-style:normal;background:linear-gradient(90deg,var(--orange),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.eb-cover-sub{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 22px;}
+.eb-cover-q{font-style:italic;color:rgba(255,255,255,.55);border-left:3px solid var(--orange);padding-left:16px;max-width:480px;margin:0 auto 40px;text-align:left;font-size:.96rem;line-height:1.65;}
+.eb-start-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;border:none;border-radius:10px;padding:16px 36px;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:background .2s;text-transform:uppercase;letter-spacing:.04em;}
+.eb-start-btn:hover{background:#e85c10;}
+.eb-cover-features{background:#fff;padding:56px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:780px;margin:0 auto;}
+.eb-fc{text-align:center;padding:26px 18px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:14px;}
+.eb-fc-icon{font-size:2rem;margin-bottom:12px;}
+.eb-fc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.97rem;color:#1a1a2e;margin-bottom:8px;}
+.eb-fc-desc{font-size:.86rem;color:#6b7280;line-height:1.6;}
+
+/* CHECKLIST */
+.cb-prog{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px;margin-bottom:26px;}
+.cb-prog-title{font-size:.9rem;font-weight:600;color:#1a1a2e;margin-bottom:4px;}
+.cb-prog-sub{font-size:.8rem;color:#9ca3af;margin-bottom:12px;}
+.cb-bar{height:10px;background:#f3f4f6;border-radius:10px;overflow:hidden;}
+.cb-bar-fill{height:100%;background:var(--orange);border-radius:10px;transition:width .4s ease;}
+.cb-group{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:14px;}
+.cb-group-hd{background:#f9fafb;padding:11px 18px;font-family:'Syne',sans-serif;font-weight:700;font-size:.86rem;color:#1a1a2e;letter-spacing:.04em;}
+.cb-items{padding:6px 18px 14px;}
+.cb-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid #f3f4f6;cursor:pointer;user-select:none;}
+.cb-item:last-child{border-bottom:none;}
+.cb-box{width:20px;height:20px;min-width:20px;border:2px solid #d1d5db;border-radius:5px;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:.72rem;font-weight:700;}
+.cb-box.ck{background:var(--orange);border-color:var(--orange);color:#fff;}
+.cb-text{font-size:.92rem;color:#374151;line-height:1.5;transition:all .2s;}
+.cb-text.done{text-decoration:line-through;color:#9ca3af;}
+
+
+.hm-big-btn:hover{transform:translateY(-3px)!important;box-shadow:0 16px 50px rgba(255,107,26,.65)!important;}
+.hm-big-btn::before{content:'';position:absolute;top:-50%;left:-60%;width:50%;height:200%;background:rgba(255,255,255,.12);transform:skewX(-20deg);transition:left .5s;}
+.hm-big-btn:hover::before{left:130%;}
+/* HOTMART BUTTON OVERRIDES */
+.hotmart-fb.hotmart__button-checkout{display:inline-block!important;border:none!important;background:none!important;padding:0!important;cursor:pointer!important;}
+.hotmart-fb.hotmart__button-checkout img{height:54px!important;border-radius:10px!important;box-shadow:0 8px 32px rgba(255,107,26,.35)!important;transition:transform .2s,box-shadow .2s!important;}
+.hotmart-fb.hotmart__button-checkout img:hover{transform:translateY(-2px)!important;box-shadow:0 12px 40px rgba(255,107,26,.5)!important;}
+/* ACCESS MODAL */
+.acc-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(8px);}
+.acc-overlay.active{display:flex;}
+.acc-modal{position:relative;background:var(--card);border:1px solid var(--border);border-radius:20px;width:100%;max-width:420px;padding:40px 36px;text-align:center;animation:modalIn .3s ease both;}
+.acc-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;line-height:1;}
+.acc-icon{width:64px;height:64px;background:rgba(255,107,26,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 18px;border:2px solid var(--orange);}
+.acc-modal h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:8px;}
+.acc-modal p{color:var(--muted);font-size:.9rem;margin-bottom:24px;line-height:1.6;}
+.acc-field{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 16px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.95rem;outline:none;transition:border-color .2s;margin-bottom:12px;}
+.acc-field:focus{border-color:var(--orange);}
+.acc-btn{width:100%;background:linear-gradient(135deg,var(--orange),#e04d00);color:#fff;border:none;border-radius:10px;padding:15px;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .2s;text-transform:uppercase;margin-bottom:10px;}
+.acc-btn:hover{transform:translateY(-1px);}
+.acc-err{font-size:.82rem;color:#ef4444;margin-top:-6px;margin-bottom:10px;display:none;}
+.acc-hint{font-size:.78rem;color:var(--muted);}
+.acc-divider{display:flex;align-items:center;gap:12px;margin:18px 0;color:var(--muted);font-size:.8rem;}
+.acc-divider::before,.acc-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.price-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;}
+</style>
+</head>
+<body>
+
+<!-- ====================== LANDING ====================== -->
+<div id="landing">
+<nav>
+  <div class="nav-logo">Foco em Ação</div>
+  <a onclick="return false;" href="https://pay.hotmart.com/F104979545V?checkoutMode=2" class="hotmart-fb hotmart__button-checkout" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;border-radius:6px;padding:10px 20px;font-family:'Syne',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;transition:background .2s;">
+    <span>🛒</span> Comprar — 8€
+  </a>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge"><span></span>Ebook para adultos com TDAH</div>
+  <h1>FOCO<br/><em>EM AÇÃO</em></h1>
+  <p class="hero-sub">Guia prático de rotina para adultos com TDAH</p>
+  <p class="hero-promise">"Organize o seu dia, diminua a procrastinação e termine o que começa em 14 dias — sem depender de força de vontade."</p>
+  <div class="hero-cta-wrap">
+    <div class="price-tag">8€</div>
+    <div class="price-sub">CHECKOUT SEGURO HOTMART · ACESSO IMEDIATO</div>
+    <a onclick="return false;" href="https://pay.hotmart.com/F104979545V?checkoutMode=2" class="hotmart-fb hotmart__button-checkout hm-big-btn" style="display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#ff6b1a,#e04d00);color:#fff;text-decoration:none;border-radius:14px;padding:20px 40px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 40px rgba(255,107,26,.5);transition:all .25s;position:relative;overflow:hidden;">
+      <span style="font-size:1.5rem">🛒</span>
+      <span style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;">
+        <span>Comprar agora por 8€</span>
+        <span style="font-size:.72rem;font-weight:500;opacity:.85;letter-spacing:.08em;text-transform:uppercase;">Checkout seguro · Acesso imediato</span>
+      </span>
+    </a>
+    <div class="hero-guarantee"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Checkout seguro Hotmart &nbsp;·&nbsp; Acesso imediato</div><button onclick="openAcc()" style="background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;text-decoration:underline;margin-top:4px">Já comprei → Aceder ao ebook</button>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat-item fade-in"><div class="stat-num">14</div><div class="stat-label">dias de plano</div></div>
+  <div class="stat-item fade-in"><div class="stat-num">7</div><div class="stat-label">capítulos práticos</div></div>
+  <div class="stat-item fade-in"><div class="stat-num">0</div><div class="stat-label">teoria desnecessária</div></div>
+  <div class="stat-item fade-in"><div class="stat-num">8€</div><div class="stat-label">investimento único</div></div>
+</div>
+
+<section class="ls forwho">
+  <div class="inner">
+    <p class="section-label fade-in">Para quem é?</p>
+    <h2 class="lsh fade-in">Este guia foi feito <em style="color:var(--orange)">para você</em> se...</h2>
+    <div class="forwho-grid">
+      <div class="forwho-col yes fade-in"><h3>✓ É para você</h3><ul><li>Você se identifica com TDAH (diagnosticado ou não) e vive se chamando de preguiçoso</li><li>Trabalha ou estuda por conta própria e sente que o dia escapa das suas mãos</li><li>Começa projetos com empolgação, mas abandona tudo no meio do caminho</li><li>Quer um passo a passo prático, curto, que possa testar já hoje</li></ul></div>
+      <div class="forwho-col no fade-in"><h3>✕ Não é para você</h3><ul><li>Procura conteúdo técnico para profissionais de saúde</li><li>Quer um livro teórico sobre a neurociência do TDAH</li><li>Não está disposto a testar uma nova rotina por pelo menos 14 dias</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="ls">
+  <div class="inner">
+    <p class="section-label fade-in">Entenda de uma vez</p>
+    <h2 class="lsh fade-in">TDAH em adultos<br/>não é frescura.</h2>
+    <p class="fade-in" style="color:var(--muted);max-width:640px;font-size:1.05rem;margin-bottom:20px">É um jeito diferente de o cérebro lidar com atenção, impulso e motivação — que faz você funcionar muito bem em algumas situações e travar completamente em outras.</p>
+    <p class="fade-in" style="max-width:640px;font-size:1.05rem">Este guia te entrega um sistema em três pilares: <strong style="color:var(--orange)">manhã simples</strong> que te coloca em movimento, <strong style="color:var(--orange)">blocos de foco</strong> adaptados para TDAH e <strong style="color:var(--orange)">ritual de fechamento</strong> para sentir progresso real.</p>
+  </div>
+</section>
+
+<section class="ls" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="inner-lg">
+    <p class="section-label fade-in">O que você vai aprender</p>
+    <h2 class="lsh fade-in">7 capítulos diretos ao ponto</h2>
+    <div class="chapters-grid">
+      <div class="chapter-card fade-in" data-num="1"><div class="chapter-tag">Capítulo 1</div><h3>Entendendo Seu Dia com TDAH</h3><p>Descubra onde sua atenção vaza ao longo do dia com o diário de atenção de 2 dias.</p></div>
+      <div class="chapter-card fade-in" data-num="2"><div class="chapter-tag">Capítulo 2</div><h3>Sistema de Prioridades em 3 Níveis</h3><p>O método dos 3 P's coloca no seu dia apenas o que realmente importa.</p></div>
+      <div class="chapter-card fade-in" data-num="3"><div class="chapter-tag">Capítulo 3</div><h3>Rotina de Manhã à Prova de Distrações</h3><p>5 passos simples (20–30 min) para começar o dia com clareza e ação.</p></div>
+      <div class="chapter-card fade-in" data-num="4"><div class="chapter-tag">Capítulo 4</div><h3>Técnica de Foco em Blocos</h3><p>Ciclos curtos de 15–20 minutos com pausas conscientes. Feito para a sua mente.</p></div>
+      <div class="chapter-card fade-in" data-num="5"><div class="chapter-tag">Capítulo 5</div><h3>Organização do Ambiente e Digital</h3><p>Limpeza TDAH de 10 minutos e higiene digital para eliminar distrações.</p></div>
+      <div class="chapter-card fade-in" data-num="6"><div class="chapter-tag">Capítulo 6</div><h3>Lidando com Procrastinação e Culpa</h3><p>A Técnica do Micro-Começo: qualquer tarefa travada em 2 minutos.</p></div>
+      <div class="chapter-card fade-in" data-num="7"><div class="chapter-tag">Capítulo 7</div><h3>Rotina de Noite para Fechar o Dia</h3><p>Termine o dia sentindo progresso real. O ritual de fechamento de 10–15 min.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ls examples-bg">
+  <div class="inner">
+    <p class="section-label fade-in">Exemplos reais</p>
+    <h2 class="lsh fade-in">Veja o que muda na prática</h2>
+    <div class="examples-grid">
+      <div class="example-card fade-in"><div class="example-name">João, 32 anos — Freelancer</div><p>Acordava, pegava o celular na cama e só começava a trabalhar depois das 11h. Com a rotina de manhã e o Primeiro Bloco Sagrado, em 3 semanas entregava trabalhos no prazo e parou de se sentir "sempre correndo atrás".</p></div>
+      <div class="example-card fade-in"><div class="example-name">Ana, 28 anos — Estudante</div><p>Começava a estudar, abria o material e logo se via no Instagram. Com blocos de foco de 15 min e apps fora da tela inicial, finalmente conseguia estudar por 1 hora completa. O segredo não foi disciplina — foram ciclos curtos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ls">
+  <div class="inner-lg">
+    <p class="section-label fade-in">Plano incluído</p>
+    <h2 class="lsh fade-in">Checklist de 14 dias <span style="color:var(--orange)">passo a passo</span></h2>
+    <div class="plan-grid">
+      <div class="plan-card fade-in"><div class="plan-days">Dias 1–2</div><ul><li><span class="chk"></span>Diário de atenção em blocos de 30 min</li><li><span class="chk"></span>Marcar os 3 piores horários de distração</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 3–4</div><ul><li><span class="chk"></span>Definir 3 Prioridades da Semana</li><li><span class="chk"></span>Lista diária com até 3 tarefas importantes</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 5–6</div><ul><li><span class="chk"></span>Rotina de manhã em 5 passos</li><li><span class="chk"></span>1 Primeiro Bloco Sagrado por dia</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 7–8</div><ul><li><span class="chk"></span>Blocos de foco de 15–20 min</li><li><span class="chk"></span>Mínimo 3 blocos por dia</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 9–10</div><ul><li><span class="chk"></span>Limpeza de 10 min na mesa</li><li><span class="chk"></span>Organizar celular e notificações</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 11–12</div><ul><li><span class="chk"></span>Micro-Começo em 3 tarefas travadas</li></ul></div>
+      <div class="plan-card fade-in"><div class="plan-days">Dias 13–14</div><ul><li><span class="chk"></span>Rotina completa: manhã + blocos + noite</li><li><span class="chk"></span>Anotar o que mais melhorou em 14 dias</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="ls purchase-bg">
+  <div class="inner">
+    <p class="section-label fade-in" style="text-align:center">Garanta o seu acesso</p>
+    <div class="purchase-box fade-in">
+      <h2>Foco em Ação</h2>
+      <p class="sub">Guia prático de rotina para adultos com TDAH</p>
+      <div class="price-big">8€</div>
+      <div class="price-desc">Pagamento único · Acesso e leitura imediatos</div>
+      <ul class="includes"><li>Ebook completo com 7 capítulos práticos</li><li>Plano de 14 dias com checklist interativo</li><li>Técnicas adaptadas para o cérebro com TDAH</li><li>Exemplos reais de aplicação</li><li>Leitura online em qualquer dispositivo</li></ul>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:16px">
+        <a onclick="return false;" href="https://pay.hotmart.com/F104979545V?checkoutMode=2" class="hotmart-fb hotmart__button-checkout" style="display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#ff6b1a,#e04d00);color:#fff;text-decoration:none;border-radius:14px;padding:22px 48px;width:100%;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 40px rgba(255,107,26,.5);transition:all .25s;">
+          <span style="font-size:1.6rem">🛒</span>
+          <span style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;">
+            <span>Comprar agora por 8€</span>
+            <span style="font-size:.72rem;font-weight:500;opacity:.8;letter-spacing:.1em">CHECKOUT SEGURO · HOTMART</span>
+          </span>
+        </a>
+        <div style="display:flex;align-items:center;gap:20px;font-size:.78rem;color:var(--muted)">
+          <span>🔒 SSL encriptado</span>
+          <span>💳 Cartão ou PayPal</span>
+          <span>✅ 7 dias garantia</span>
+        </div>
+      </div>
+      <div class="secure-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro · Dados encriptados</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom:8px;font-family:'Syne',sans-serif;font-weight:700;color:var(--orange);letter-spacing:.08em">FOCO EM AÇÃO</p>
+  <p>Este ebook não substitui diagnóstico nem tratamento médico. É um guia prático de organização de rotina.</p>
+  <p style="margin-top:8px">© 2025 Foco em Ação. Todos os direitos reservados.</p>
+</footer>
+</div>
+
+<!-- ====================== MODAL ====================== -->
+<div class="overlay" id="overlay" onclick="handleOvClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="pform">
+      <div class="modal-logo">Foco em Ação</div>
+      <h3>Finalizar compra</h3>
+      <p style="font-size:.85rem;color:var(--muted)">Acesso imediato após o pagamento</p>
+      <div class="modal-price-row"><span>Ebook Foco em Ação</span><span>8€</span></div>
+      <div class="field-group">
+        <div><div class="field-label">Nome completo</div><input class="field-input" type="text" placeholder="O seu nome"/></div>
+        <div><div class="field-label">E-mail</div><input class="field-input" type="email" placeholder="email@exemplo.com"/></div>
+        <div><div class="field-label">Número do cartão</div><input class="field-input" type="text" placeholder="0000 0000 0000 0000" maxlength="19" oninput="this.value=this.value.replace(/\D/g,'').substring(0,16).replace(/(.{4})/g,'$1 ').trim()"/></div>
+        <div class="field-row">
+          <div><div class="field-label">Validade</div><input class="field-input" type="text" placeholder="MM/AA" maxlength="5" oninput="let v=this.value.replace(/\D/g,'').substring(0,4);if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);this.value=v"/></div>
+          <div><div class="field-label">CVV</div><input class="field-input" type="text" placeholder="123" maxlength="3"/></div>
+        </div>
+      </div>
+      <button class="btn-pay" id="paybtn" onclick="processPay()">Pagar 8€ agora</button>
+      <div class="modal-secure">🔒 Pagamento seguro e encriptado</div>
+    </div>
+    <div class="success-screen" id="sscreen">
+      <div class="success-icon">✓</div>
+      <h3>Pagamento confirmado!</h3>
+      <p>O seu acesso está pronto. Clique abaixo para começar a leitura agora mesmo.</p>
+      <button class="btn-access" onclick="openEbook()">📖 Aceder ao Ebook agora</button>
+      <p style="margin-top:16px;font-size:.8rem;color:var(--muted)">Um e-mail de confirmação será enviado em breve.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== EBOOK APP ====================== -->
+<div id="ebook-app">
+  <header class="eb-mobile-header">
+    <button class="eb-mob-btn" onclick="toggleSb()">☰</button>
+    <span class="eb-mob-title">FOCO EM AÇÃO</span>
+    <span style="width:36px"></span>
+  </header>
+  <div class="eb-scrim" id="scrim" onclick="closeSb()"></div>
+  <div class="eb-layout">
+    <aside class="eb-sidebar" id="sidebar">
+      <div class="eb-sidebar-logo"><h2>FOCO EM AÇÃO</h2><p>Guia para Adultos com TDAH</p></div>
+      <nav class="eb-nav" id="ebnav"></nav>
+      <div class="eb-prog-wrap">
+        <div class="eb-prog-label">Progresso da leitura</div>
+        <div class="eb-prog-bar"><div class="eb-prog-fill" id="progfill" style="width:0%"></div></div>
+        <div class="eb-prog-count" id="progcount"></div>
+      </div>
+    </aside>
+    <main class="eb-main" id="ebmain"></main>
+  </div>
+</div>
+
+<script>
+// ===================== HOTMART ACCESS =====================
+const PURCHASE_KEY = 'fea_access';
+
+function openAcc(){
+  document.getElementById('accOverlay').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeAcc(){
+  document.getElementById('accOverlay').classList.remove('active');
+  document.body.style.overflow='';
+}
+function closeAccModal(e){
+  if(e.target===document.getElementById('accOverlay')) closeAcc();
+}
+function verifyAccess(){
+  const email = document.getElementById('accEmail').value.trim().toLowerCase();
+  if(!email || !email.includes('@')){
+    document.getElementById('accErr').textContent='Por favor insira um e-mail válido.';
+    document.getElementById('accErr').style.display='block';
+    return;
+  }
+  // Store access and open ebook
+  localStorage.setItem(PURCHASE_KEY, email);
+  closeAcc();
+  openEbook();
+}
+function openEbook(){
+  document.getElementById('landing').style.display='none';
+  document.getElementById('ebook-app').style.display='block';
+  document.body.style.background='#f0f0f5';
+  document.body.style.overflow='';
+  initEbook();
+}
+
+// Check URL param ?acesso=1 (from Hotmart thank-you redirect)
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  if(p.get('acesso')==='1') openEbook();
+})();
+
+// ===================== DATA =====================
+const SECS=[
+  {id:'cover',    title:'Capa',                      icon:'🏠', chapter:false},
+  {id:'promessa', title:'Promessa do Ebook',          icon:'📌', chapter:false},
+  {id:'paraquem', title:'Para Quem É',                icon:'👤', chapter:false},
+  {id:'intro',    title:'Introdução',                 icon:'📖', chapter:false},
+  {id:'cap1',     title:'Cap. 1 – Entendendo o Dia',  icon:'📓', chapter:true},
+  {id:'cap2',     title:'Cap. 2 – Prioridades 3P',    icon:'📓', chapter:true},
+  {id:'cap3',     title:'Cap. 3 – Rotina de Manhã',   icon:'📓', chapter:true},
+  {id:'cap4',     title:'Cap. 4 – Foco em Blocos',    icon:'📓', chapter:true},
+  {id:'cap5',     title:'Cap. 5 – Ambiente Digital',  icon:'📓', chapter:true},
+  {id:'cap6',     title:'Cap. 6 – Procrastinação',    icon:'📓', chapter:true},
+  {id:'cap7',     title:'Cap. 7 – Rotina de Noite',   icon:'📓', chapter:true},
+  {id:'exemplos', title:'Exemplos Práticos',          icon:'💡', chapter:false},
+  {id:'checklist',title:'Plano de 14 Dias',           icon:'✅', chapter:false},
+];
+let curIdx=0;
+const CL={};
+
+// ===================== LANDING =====================
+
+// ===================== EBOOK =====================
+function initEbook(){buildNav();goTo(0);}
+function buildNav(){
+  const nav=document.getElementById('ebnav');nav.innerHTML='';
+  SECS.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.className='eb-nav-btn'+(s.chapter?' is-chapter':'');
+    b.innerHTML=`<span style="font-size:.88rem">${s.icon}</span><span>${s.title}</span>`;
+    b.id='nb'+i;b.onclick=()=>{goTo(i);closeSb();};
+    nav.appendChild(b);
+  });
+}
+function goTo(i){
+  curIdx=i;
+  document.querySelectorAll('.eb-nav-btn').forEach((b,j)=>b.classList.toggle('active',j===i));
+  const pct=((i+1)/SECS.length*100).toFixed(0);
+  document.getElementById('progfill').style.width=pct+'%';
+  document.getElementById('progcount').textContent=`${i+1} de ${SECS.length}`;
+  const r={cover:rCover,promessa:rPromessa,paraquem:rParaQuem,intro:rIntro,cap1:rCap1,cap2:rCap2,cap3:rCap3,cap4:rCap4,cap5:rCap5,cap6:rCap6,cap7:rCap7,exemplos:rExemplos,checklist:rChecklist};
+  document.getElementById('ebmain').innerHTML=(r[SECS[i].id]||rCover)();
+  document.getElementById('ebmain').scrollTop=0;window.scrollTo({top:0,behavior:'smooth'});
+}
+function prev(){if(curIdx>0)goTo(curIdx-1);}
+function next(){if(curIdx<SECS.length-1)goTo(curIdx+1);}
+function toggleSb(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('scrim').classList.toggle('show');}
+function closeSb(){document.getElementById('sidebar').classList.remove('open');document.getElementById('scrim').classList.remove('show');}
+function navRow(){
+  return`<div class="eb-nav-row"><button class="eb-nbtn" onclick="prev()" ${curIdx===0?'disabled':''}>← Anterior</button><button class="eb-nbtn nx" onclick="next()" ${curIdx===SECS.length-1?'disabled':''}>Próximo →</button></div>`;
+}
+
+// ===================== PAGES =====================
+function rCover(){return`<div class="eb-cover"><div class="eb-cover-hero"><div class="eb-cover-badge">🧠 Guia Prático de Rotina</div><h1 class="eb-cover-title">FOCO<br/><em>EM AÇÃO</em></h1><p class="eb-cover-sub">Guia prático de rotina para adultos com TDAH</p><blockquote class="eb-cover-q">"Organize o seu dia, diminua a procrastinação e termine o que começa em 14 dias, sem depender de força de vontade."</blockquote><button class="eb-start-btn" onclick="goTo(1)">Começar a Ler →</button></div><div class="eb-cover-features"><div class="eb-fc"><div class="eb-fc-icon">🎯</div><div class="eb-fc-title">Sistema Simples</div><div class="eb-fc-desc">Um método em três pilares adaptado ao cérebro com TDAH.</div></div><div class="eb-fc"><div class="eb-fc-icon">🧠</div><div class="eb-fc-title">Sem Teoria Longa</div><div class="eb-fc-desc">Passo a passo direto, sem termos difíceis. Ações que aplica hoje.</div></div><div class="eb-fc"><div class="eb-fc-icon">✅</div><div class="eb-fc-title">Plano de 14 Dias</div><div class="eb-fc-desc">Checklist completo para implementar cada estratégia e ver resultados.</div></div></div></div>`;}
+
+function rPromessa(){return`<div class="eb-page"><h1 class="eb-h1">Promessa Clara do Ebook</h1><p class="eb-lead">Se você é adulto, vive pulando de tarefa em tarefa, acumula atrasos e se sente um fracasso porque "não consegue ser organizado", este ebook foi feito para você.</p><p class="eb-p">Aqui você <strong>não vai encontrar</strong> teoria longa sobre TDAH, nem termos difíceis. Vai encontrar um <strong>sistema simples</strong> para organizar seu dia, proteger seu foco e finalizar tarefas importantes mesmo com uma mente inquieta.</p><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">💡</span><p><strong>Em 14 dias</strong> você terá uma rotina de manhã, blocos de foco e fechamento do dia desenhada para o seu cérebro com TDAH.</p></div>${navRow()}</div>`;}
+
+function rParaQuem(){return`<div class="eb-page"><h1 class="eb-h1">Para Quem É (e para quem não é)</h1><h2 class="eb-h2">✅ Este ebook é para você se:</h2><ul class="eb-ul"><li>Você se identifica com TDAH (diagnosticado ou não) e vive se chamando de preguiçoso.</li><li>Você trabalha ou estuda por conta própria (home office, faculdade, concurso, freelancer) e sente que o dia escapa das suas mãos.</li><li>Você começa projetos com empolgação, mas abandona tudo no meio do caminho.</li><li>Você quer um passo a passo prático, curto, que possa testar já hoje.</li></ul><h2 class="eb-h2">❌ Este ebook NÃO é para você se:</h2><ul class="eb-ul" style="--oc:#9ca3af"><li style="color:#6b7280">Você procura um conteúdo técnico para profissionais de saúde.</li><li style="color:#6b7280">Você quer um livro teórico explicando toda a neurociência do TDAH.</li><li style="color:#6b7280">Você não está disposto a testar uma nova rotina por pelo menos 14 dias.</li></ul><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">💡</span><p>Se você quer resultado rápido, com ações simples, siga em frente.</p></div>${navRow()}</div>`;}
+
+function rIntro(){return`<div class="eb-page"><h1 class="eb-h1">Introdução Curta e Direta</h1><p class="eb-lead" style="font-weight:600">TDAH em adultos não é frescura, preguiça ou falta de caráter.</p><p class="eb-p">É um jeito diferente de o cérebro lidar com atenção, impulso e motivação, que faz você funcionar muito bem em algumas situações e travar completamente em outras.</p><p class="eb-p">O problema é que o mundo foi desenhado para cérebros que funcionam de outro jeito. Listas enormes, agendas cheias e rotinas engessadas simplesmente não combinam com você.</p><div class="eb-warn"><span style="font-size:1.1rem;flex-shrink:0">⚠️</span><p>Este ebook <strong>não substitui</strong> diagnóstico nem tratamento médico. O foco é: como você pode organizar o seu dia hoje para sofrer menos com distração, procrastinação e culpa.</p></div><h2 class="eb-h2">Você vai aprender um sistema em três pilares:</h2><div class="eb-steps"><div class="eb-step"><div class="eb-step-n">1</div><div><strong>Manhã simples que te coloca em movimento.</strong><span>Sem depender de motivação para começar.</span></div></div><div class="eb-step"><div class="eb-step-n">2</div><div><strong>Blocos de foco adaptados para TDAH.</strong><span>Ciclos curtos que respeitam a sua mente.</span></div></div><div class="eb-step"><div class="eb-step-n">3</div><div><strong>Ritual de fechamento do dia para sentir progresso real.</strong><span>Termine o dia com sensação de conquista.</span></div></div></div><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">📌</span><p>Leia um capítulo por dia, aplique pelo menos <strong>UMA ação</strong> e marque no checklist final. O resultado vem da aplicação, não da leitura.</p></div>${navRow()}</div>`;}
+
+function rCap1(){return`<div class="eb-page"><span class="eb-badge">Capítulo 1</span><h1 class="eb-h1">Entendendo Seu Dia com TDAH</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: mostrar onde sua atenção vaza ao longo do dia.</p><p class="eb-p">Adultos com TDAH muitas vezes acham que "não fizeram nada", mas na verdade fizeram mil coisas desconectadas. <strong>Antes de organizar, você precisa enxergar o que está acontecendo.</strong></p><h2 class="eb-h2">Passo 1 — Mini autoavaliação rápida</h2><p class="eb-p">Responda, sem pensar demais:</p><ul class="eb-ul"><li>Você costuma se atrasar para compromissos?</li><li>Quantas vezes por semana você perde prazos ou esquece tarefas importantes?</li><li>Quantas vezes por dia você pega o celular "só um minuto" e perde meia hora?</li><li>Você costuma começar o dia sabendo o que precisa fazer ou decide na hora?</li><li>Você termina o dia com sensação de tarefa concluída ou de dívida acumulada?</li></ul><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">💡</span><p>Se a maioria das respostas for "sim" ou "não sei", o seu dia está sendo comandado pelo impulso, não por um plano.</p></div><h2 class="eb-h2">Passo 2 — Diário de atenção de 2 dias</h2><p class="eb-p">Durante 2 dias, registre em blocos de 30 minutos o que você realmente fez.</p><div class="eb-code"><div class="eb-code-hd">Modelo de Diário</div><div class="eb-code-bd" style="font-family:monospace;font-size:.87rem;color:#374151;line-height:1.9">8:00 – 8:30 → Acordei, fiquei no celular<br/>8:30 – 9:00 → Café + Instagram<br/>9:00 – 9:30 → Abri o computador, respondi WhatsApp<br/>9:30 – 10:00 → Comecei tarefa X, parei na metade para ver e-mail</div></div><ul class="eb-ul"><li>Blocos em que você estava focado em algo importante.</li><li>Blocos em que você se perdeu em distrações.</li></ul><p class="eb-p" style="font-weight:600">Você terá um mapa claro de onde seu foco está sendo roubado.</p><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 1</div><ul class="eb-ul"><li>Imprima ou crie uma tabela simples no bloco de notas.</li><li>Faça o diário de atenção por 2 dias.</li><li>Circule os 3 piores horários de distração.</li></ul><p class="eb-p" style="margin-top:12px;font-weight:600">Esses serão os primeiros horários a serem protegidos nos próximos capítulos.</p></div>${navRow()}</div>`;}
+
+function rCap2(){return`<div class="eb-page"><span class="eb-badge">Capítulo 2</span><h1 class="eb-h1">Sistema de Prioridades em 3 Níveis</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: acabar com listas gigantes que viram decoração.</p><p class="eb-p">Quem tem TDAH costuma subestimar o tempo das tarefas e lotar o dia com coisas demais. Resultado: tudo trava. Aqui você vai usar o <strong>método dos 3 P's</strong>.</p><h2 class="eb-h2">Os 3 P's:</h2><div class="eb-pcard"><div class="eb-pcard-i">P</div><div><strong>Prioridade do Dia</strong><span>Se só uma coisa for feita hoje, qual é?</span></div></div><div class="eb-pcard"><div class="eb-pcard-i">P</div><div><strong>Prioridades da Semana</strong><span>Até 3 resultados importantes que precisam acontecer esta semana.</span></div></div><div class="eb-pcard"><div class="eb-pcard-i">P</div><div><strong>Prioridade da Vida</strong><span>1 objetivo maior (ex.: terminar faculdade, passar no concurso, estabilizar renda).</span></div></div><h2 class="eb-h2">Como montar sua lista diária:</h2><p class="eb-p">Todas as manhãs, <strong>antes de mexer no celular:</strong></p><ol class="eb-ol"><li>Olhe suas Prioridades da Semana.</li><li>Escolha até 3 tarefas importantes para hoje.</li><li>Coloque o resto em uma lista "se der tempo".</li></ol><div class="eb-code"><div class="eb-code-hd" style="background:var(--orange);color:#fff">Modelo de Lista Diária</div><div class="eb-code-bd"><p style="font-weight:700;margin-bottom:8px">Tarefas importantes (máx. 3):</p><ul class="eb-ul" style="margin-bottom:14px"><li>Gravar 1 vídeo para Instagram</li><li>Entregar trabalho X</li><li>Treino rápido de 20 min</li></ul><p style="font-weight:700;color:#9ca3af;margin-bottom:8px">Se der tempo:</p><ul class="eb-ul"><li style="color:#9ca3af">Responder e-mails não urgentes</li><li style="color:#9ca3af">Arrumar gaveta</li></ul></div></div><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 2</div><ul class="eb-ul"><li>Escreva hoje suas 3 Prioridades da Semana.</li><li>Amanhã de manhã, faça sua lista com no máximo 3 tarefas importantes.</li><li>Ao final do dia, marque as que foram concluídas.</li></ul></div>${navRow()}</div>`;}
+
+function rCap3(){return`<div class="eb-page"><span class="eb-badge">Capítulo 3</span><h1 class="eb-h1">Rotina de Manhã à Prova de Distrações</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: começar o dia com clareza e ação, não com caos e celular.</p><p class="eb-p">A forma como você começa o dia define o ritmo do restante. Você não precisa de uma "miracle morning" de duas horas; precisa de uma <strong>sequência simples</strong>.</p><h2 class="eb-h2">Roteiro de Manhã em 5 passos (20–30 min):</h2><div class="eb-steps"><div class="eb-step"><div class="eb-step-n">1</div><div><strong>Acordar e beber água</strong><span>Nada de pegar o celular na cama.</span></div></div><div class="eb-step"><div class="eb-step-n">2</div><div><strong>Movimento rápido (3–5 minutos)</strong><span>Polichinelos, alongamento, caminhada dentro de casa.</span></div></div><div class="eb-step"><div class="eb-step-n">3</div><div><strong>Revisão da lista de 3 tarefas importantes</strong><span>Relembre o que importa hoje.</span></div></div><div class="eb-step"><div class="eb-step-n">4</div><div><strong>Preparar o ambiente de foco</strong><span>Mesa limpa, só o necessário à vista.</span></div></div><div class="eb-step"><div class="eb-step-n">5</div><div><strong>Primeiro Bloco Sagrado</strong><span>Começar imediatamente a tarefa mais importante, sem redes sociais antes.</span></div></div></div><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">🔑</span><p style="font-size:1.05rem;font-weight:700">"Celular só depois do Primeiro Bloco Sagrado."</p></div><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 3</div><ul class="eb-ul"><li>Hoje à noite, deixe um copo de água e sua lista de 3 tarefas já pronta.</li><li>Amanhã, siga os 5 passos e marque no checklist.</li><li>Repita por 7 dias antes de tentar otimizar qualquer outra coisa.</li></ul></div>${navRow()}</div>`;}
+
+function rCap4(){return`<div class="eb-page"><span class="eb-badge">Capítulo 4</span><h1 class="eb-h1">Técnica de Foco em Blocos (Adaptada para TDAH)</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: manter o foco em ciclos curtos, sem se torturar.</p><p class="eb-p">Em vez de tentar focar por 2 horas seguidas, você vai trabalhar com <strong>blocos de foco e pausas programadas</strong>.</p><h2 class="eb-h2">Passo 1 — Escolha do tempo</h2><div class="eb-timer"><div><div class="eb-timer-n">15–20</div><div class="eb-timer-l">min de foco</div></div><div style="font-size:1.5rem;color:#9ca3af">+</div><div><div class="eb-timer-n">5</div><div class="eb-timer-l">min de pausa</div></div></div><p class="eb-p" style="color:#6b7280">Se estiver fácil, aumente para 25/5 ou 30/5.</p><h2 class="eb-h2">Passo 2 — Como usar o bloco de foco</h2><ol class="eb-ol"><li>Escolha uma tarefa específica (ex.: "escrever introdução do trabalho").</li><li>Tire da mesa tudo que não for necessário.</li><li>Ative um timer (qualquer app ou timer físico).</li><li>Durante o bloco, você só tem duas opções: trabalhar na tarefa ou olhar para a parede.</li></ol><div class="eb-warn"><span style="font-size:1.1rem;flex-shrink:0">⚠️</span><p><strong>Nada de celular, nada de outra aba.</strong></p></div><h2 class="eb-h2">Passo 3 — Pausa consciente</h2><ul class="eb-ul"><li>Levante, beba água, alongue, olhe pela janela.</li><li><strong>Evite redes sociais</strong>, porque elas sequestram o próximo bloco.</li></ul><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 4</div><ul class="eb-ul"><li>Hoje, faça pelo menos 3 blocos de foco de 15–20 minutos na tarefa mais importante.</li><li>Marque quantos blocos fez e quanto entregou.</li><li>Ajuste o tempo conforme sua tolerância.</li></ul></div>${navRow()}</div>`;}
+
+function rCap5(){return`<div class="eb-page"><span class="eb-badge">Capítulo 5</span><h1 class="eb-h1">Organização do Ambiente e do Digital</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: reduzir distrações externas que sabotam seu foco.</p><p class="eb-p">Um ambiente poluído exige mais energia do seu cérebro para filtrar estímulos. <strong>Vamos simplificar.</strong></p><h2 class="eb-h2">Checklist da "Zona de Foco":</h2><ul class="eb-ul"><li>Mesa com apenas: computador/caderno, água, bloco de notas, caneta.</li><li>Sem pratos, roupas, papéis soltos, fones jogados.</li><li>Fone com som neutro ou ruído branco, se te ajudar.</li></ul><h2 class="eb-h2">Faça uma "limpeza TDAH" de 10 minutos:</h2><ol class="eb-ol"><li>Pegue uma caixa.</li><li>Jogue tudo que está na mesa dentro.</li><li>Guarde a caixa. Você organiza depois — agora o foco é trabalhar.</li></ol><h2 class="eb-h2">Higiene digital para foco:</h2><ul class="eb-ul"><li>Desative notificações de redes sociais.</li><li>Tire aplicativos de entretenimento da tela inicial.</li><li>Crie uma pasta chamada "Depois do Trabalho" e coloque esses apps lá.</li><li>Use modo "Não Perturbe" durante blocos de foco.</li></ul><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 5</div><ul class="eb-ul"><li>Faça hoje a limpeza de 10 minutos da sua mesa.</li><li>Organize a tela inicial do celular removendo tudo que não for essencial.</li></ul></div>${navRow()}</div>`;}
+
+function rCap6(){return`<div class="eb-page"><span class="eb-badge">Capítulo 6</span><h1 class="eb-h1">Lidando com Procrastinação e Culpa</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: destravar quando você simplesmente não consegue começar.</p><p class="eb-p">Adultos com TDAH sabem exatamente o que precisam fazer, mas o corpo não vai. <strong>Ficam presos entre culpa e paralisia.</strong></p><h2 class="eb-h2">Técnica do "Micro-Começo"</h2><p class="eb-p">Transforme qualquer tarefa em uma ação de <strong>2 minutos</strong>.</p><div class="eb-code"><div class="eb-code-hd">Exemplos</div><div class="eb-code-bd"><div class="eb-tr"><span class="eb-tr-bef">"Escrever relatório"</span><span class="eb-tr-arr">→</span><span class="eb-tr-aft">"Abrir documento e escrever o primeiro parágrafo."</span></div><div class="eb-tr"><span class="eb-tr-bef">"Estudar capítulo 3"</span><span class="eb-tr-arr">→</span><span class="eb-tr-aft">"Ler a primeira página e sublinhar 3 frases."</span></div><div class="eb-tr"><span class="eb-tr-bef">"Arrumar quarto"</span><span class="eb-tr-arr">→</span><span class="eb-tr-aft">"Juntar as roupas do chão e colocar em um cesto."</span></div></div></div><div class="eb-hl"><span style="font-size:1.1rem;flex-shrink:0">💡</span><p><strong>Regra:</strong> depois dos 2 minutos, você pode parar se quiser. Na prática, seu cérebro já entrou em movimento e é mais fácil continuar.</p></div><h2 class="eb-h2">Script rápido contra a culpa</h2><div class="eb-quote">"Eu não sou preguiçoso. Meu cérebro só precisa de passos menores. Qual é o micro-passo de 2 minutos agora?"</div><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 6</div><ul class="eb-ul"><li>Escolha 3 tarefas que você está procrastinando.</li><li>Quebre cada uma em um micro-começo de 2 minutos.</li><li>Execute apenas o micro-começo e marque no checklist.</li></ul></div>${navRow()}</div>`;}
+
+function rCap7(){return`<div class="eb-page"><span class="eb-badge">Capítulo 7</span><h1 class="eb-h1">Rotina de Noite para Fechar o Dia</h1><p class="eb-lead" style="font-style:italic;color:#6b7280">Objetivo: terminar o dia com sensação de progresso, não de fracasso.</p><p class="eb-p">Você não precisa ter feito tudo. <strong>Precisa enxergar o que avançou e planejar o mínimo para amanhã.</strong></p><h2 class="eb-h2">Roteiro de fechamento (10–15 minutos):</h2><div class="eb-steps"><div class="eb-step"><div class="eb-step-n">1</div><div><strong>Revise sua lista de 3 tarefas importantes</strong><span>O que foi concluído? O que andou um pouco?</span></div></div><div class="eb-step"><div class="eb-step-n">2</div><div><strong>Escreva em uma linha:</strong><span>"Hoje eu avancei em…"</span></div></div><div class="eb-step"><div class="eb-step-n">3</div><div><strong>Escolha as 3 tarefas importantes de amanhã</strong><span>(pode ser continuar o que não terminou).</span></div></div><div class="eb-step"><div class="eb-step-n">4</div><div><strong>Prepare o ambiente:</strong><span>Mesa minimamente organizada, copo de água pronto, caderno aberto.</span></div></div><div class="eb-step"><div class="eb-step-n">5</div><div><strong>Defina o horário</strong><span>em que vai começar o Primeiro Bloco Sagrado amanhã.</span></div></div></div><div class="eb-action"><div class="eb-action-ttl">Aplicação prática do Capítulo 7</div><ul class="eb-ul"><li>Hoje à noite, antes de deitar, faça esse fechamento rápido.</li><li>Repita por 7 dias e observe como sua ansiedade começa a diminuir.</li></ul></div>${navRow()}</div>`;}
+
+function rExemplos(){return`<div class="eb-page"><h1 class="eb-h1">Exemplos Práticos</h1><div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;margin-bottom:24px"><div style="background:var(--orange);padding:14px 20px"><h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:#fff">João, 32 anos — Home Office / Freelancer</h3></div><div style="padding:24px"><p class="eb-p">João trabalhava como freelancer e vivia atrasado com os clientes. Ele acordava, pegava o celular na cama e só começava a trabalhar depois das 11h.</p><p class="eb-p">Com a <strong>rotina de manhã em 5 passos</strong> e o <strong>Primeiro Bloco Sagrado</strong>, ele passou a fazer 2 blocos de foco cedo, antes das redes sociais.</p><div style="background:#fff8f4;border-radius:8px;padding:14px 18px"><p style="font-weight:600;color:var(--orange);margin:0">Em 3 semanas, entregava a maioria dos trabalhos no prazo e parou de sentir que estava "sempre correndo atrás".</p></div></div></div><div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;margin-bottom:24px"><div style="background:var(--orange);padding:14px 20px"><h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:#fff">Ana, 28 anos — Estudante</h3></div><div style="padding:24px"><p class="eb-p">Ana começava a estudar, abria o material e logo se via no Instagram.</p><p class="eb-p">Ao usar <strong>blocos de foco de 15 minutos</strong> e tirar os apps da tela inicial do celular, ela finalmente conseguia estudar por 1 hora com quatro blocos.</p><div style="background:#fff8f4;border-radius:8px;padding:14px 18px"><p style="font-weight:600;color:var(--orange);margin:0">O segredo não foi disciplina, foi deixar o celular menos acessível e trabalhar em ciclos curtos.</p></div></div></div>${navRow()}</div>`;}
+
+function rChecklist(){
+  const groups=[
+    {days:'Dias 1–2',items:[{id:'1a',t:'Fazer diário de atenção em blocos de 30 minutos (Cap. 1)'},{id:'1b',t:'Marcar os 3 piores horários de distração'}]},
+    {days:'Dias 3–4',items:[{id:'2a',t:'Definir 3 Prioridades da Semana'},{id:'2b',t:'Fazer lista diária com até 3 tarefas importantes (Cap. 2)'}]},
+    {days:'Dias 5–6',items:[{id:'3a',t:'Implementar rotina de manhã em 5 passos (Cap. 3)'},{id:'3b',t:'Fazer pelo menos 1 Primeiro Bloco Sagrado por dia'}]},
+    {days:'Dias 7–8',items:[{id:'4a',t:'Testar blocos de foco de 15–20 minutos (Cap. 4)'},{id:'4b',t:'Fazer no mínimo 3 blocos por dia na tarefa principal'}]},
+    {days:'Dias 9–10',items:[{id:'5a',t:'Fazer limpeza de 10 minutos na mesa (Cap. 5)'},{id:'5b',t:'Organizar tela inicial do celular e desativar notificações'}]},
+    {days:'Dias 11–12',items:[{id:'6a',t:'Aplicar a técnica do Micro-Começo em 3 tarefas travadas (Cap. 6)'}]},
+    {days:'Dias 13–14',items:[{id:'7a',t:'Fazer rotina completa: manhã + blocos de foco + fechamento do dia (Cap. 7)'},{id:'7b',t:'Anotar em uma frase: "O que mais melhorou na minha vida nesses 14 dias?"'}]},
+  ];
+  const total=groups.reduce((a,g)=>a+g.items.length,0);
+  const done=Object.values(CL).filter(Boolean).length;
+  const pct=Math.round(done/total*100);
+  let h=`<div class="eb-page"><h1 class="eb-h1">Plano de 14 Dias</h1><p class="eb-lead">Use este checklist para acompanhar seu progresso. Marque cada item conforme for completando.</p><div class="cb-prog"><div class="cb-prog-title">Seu progresso</div><div class="cb-prog-sub">${done} de ${total} tarefas · ${pct}%</div><div class="cb-bar"><div class="cb-bar-fill" style="width:${pct}%"></div></div></div>`;
+  groups.forEach(g=>{
+    h+=`<div class="cb-group"><div class="cb-group-hd">${g.days}</div><div class="cb-items">`;
+    g.items.forEach(it=>{
+      const ck=CL[it.id]||false;
+      h+=`<div class="cb-item" onclick="tgl('${it.id}')"><div class="cb-box${ck?' ck':''}">${ck?'✓':''}</div><div class="cb-text${ck?' done':''}">${it.t}</div></div>`;
+    });
+    h+=`</div></div>`;
+  });
+  h+=`<div class="eb-hl" style="margin-top:28px"><span style="font-size:1.1rem;flex-shrink:0">🎉</span><p>Parabéns por chegar até aqui! Lembre-se: <strong>o resultado vem da aplicação, não da leitura</strong>. Volte ao checklist todos os dias.</p></div>${navRow()}</div>`;
+  return h;
+}
+
+function tgl(id){CL[id]=!CL[id];if(SECS[curIdx].id==='checklist')document.getElementById('ebmain').innerHTML=rChecklist();}
+
+// ===================== SCROLL ANIM =====================
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
